@@ -3,7 +3,8 @@ const redirect_map = { //NOTE coutries are represented with the ISO 3166-1 alpha
 }
 const ipinfo_api_key = "";
 
-document.documentElement.style.display = "none";
+// document.documentElement.style.display = "none";
+// document.body.style.display = "none";
 
 (async () => {
 	try {
@@ -16,12 +17,11 @@ document.documentElement.style.display = "none";
 		// window.location = country in redirect_map ? redirect_map[country] : "./page.html" //NOTE the index/page paradigm
 
 		if (country in redirect_map) {
-			window.location = redirect_map[country] //NOTE the single page (index_page) paradigm
+			window.location.replace(redirect_map[country]) //NOTE the single page (index_page) paradigm
+		} else {
+			document.documentElement.style.display = "block";
 		}
 	} catch (err) {
 		console.error(err);
-	}
-	finally {
-		document.documentElement.style.display = "";
 	}
 })();

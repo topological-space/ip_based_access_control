@@ -8,3 +8,8 @@ the second paradigm create an empty index page in which the ip_based_access_cont
 if the user is allowed to view the content he will be redirected to a new page with the content,
 otherwise he will be redirected somewhere else, but the downside of this pradigms is that,
 everyone can access the content page if he had its URL, there is nothing that protects it
+UPDATE most of the problems with the first paradigm are solved but it still not perfect at all,
+the appearance of the content before the fetchin is finished is solved by setting the default display value
+of the document element to none, instead of setting it in script,
+the ability of going back to the previous page is solved using the replace method in window.location,
+instead of changin' its value
