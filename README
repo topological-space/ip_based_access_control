@@ -1,0 +1,10 @@
+this is an attempt to simulate an ip based access control system in the client side,
+two paradigms which actually both fails to hide the private content of the page,
+the first one is based on including the ip_based_access_control script inside the content page,
+but the content of the page will always get rendered before the script finishes executing,
+which means the content will appeare for like a second before redirection,
+but the biggest failure is that you can always go back to the previous page,
+the second paradigm create an empty index page in which the ip_based_access_control script will be included,
+if the user is allowed to view the content he will be redirected to a new page with the content,
+otherwise he will be redirected somewhere else, but the downside of this pradigms is that,
+everyone can access the content page if he had its URL, there is nothing that protects it
